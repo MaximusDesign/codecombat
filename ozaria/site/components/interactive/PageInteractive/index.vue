@@ -72,8 +72,17 @@
 </script>
 
 <template>
+  <draggable-statement-completion
+   v-if="true"
+   :interactive="interactive"
+   :introLevelId="introLevelId"
+   :interactiveSession="interactiveSession"
+   :courseInstanceId="courseInstanceId"
+   @completed="onCompleted"
+  />
+
   <draggable-ordering
-    v-if="interactiveType == 'draggable-ordering'"
+    v-else-if="interactiveType == 'draggable-ordering'"
     :interactive="interactive"
     :introLevelId="introLevelId"
     :interactiveSession="interactiveSession"
@@ -88,15 +97,6 @@
     :interactiveSession="interactiveSession"
     :courseInstanceId="courseInstanceId"
     @completed="onCompleted"
-  />
-
-  <draggable-statement-completion
-    v-else-if="interactiveType == 'draggable-statement-completion'"
-    :interactive="interactive"
-    :introLevelId="introLevelId"
-    :interactiveSession="interactiveSession"
-    :courseInstanceId="courseInstanceId"
-    v-on:completed="onCompleted"
   />
 </template>
 
