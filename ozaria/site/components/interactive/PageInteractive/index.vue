@@ -1,6 +1,6 @@
 <script>
   import { getInteractive, getSession } from '../../../api/interactive'
-  import draggableOrderingComponent from './draggableOrdering'
+  import draggableOrderingComponent from './draggableOrdering/index'
   import insertCodeComponent from './insertCode'
   import draggableStatementCompletionComponent from './draggableStatementCompletion'
 
@@ -73,7 +73,7 @@
 
 <template>
   <draggable-statement-completion
-   v-if="true"
+   v-if="false"
    :interactive="interactive"
    :introLevelId="introLevelId"
    :interactiveSession="interactiveSession"
@@ -82,7 +82,7 @@
   />
 
   <draggable-ordering
-    v-else-if="interactiveType == 'draggable-ordering'"
+    v-else-if="true"
     :interactive="interactive"
     :introLevelId="introLevelId"
     :interactiveSession="interactiveSession"
@@ -91,7 +91,7 @@
   />
 
   <insert-code
-    v-else-if="interactiveType == 'insert-code'"
+    v-else-if="false"
     :interactive="interactive"
     :introLevelId="introLevelId"
     :interactiveSession="interactiveSession"
