@@ -82,7 +82,7 @@
   />
 
   <draggable-ordering
-    v-else-if="true"
+    v-else-if="false"
     :interactive="interactive"
     :introLevelId="introLevelId"
     :interactiveSession="interactiveSession"
@@ -91,7 +91,7 @@
   />
 
   <insert-code
-    v-else-if="false"
+    v-else-if="true"
     :interactive="interactive"
     :introLevelId="introLevelId"
     :interactiveSession="interactiveSession"
@@ -103,4 +103,3 @@
 <style scoped>
 
 </style>
-
